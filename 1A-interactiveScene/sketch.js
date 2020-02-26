@@ -9,9 +9,9 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   console.log(windowWidth);
-  console.log("lightblue");
+  console.log(windowHeight);
 }
 
 function draw() {
-  background(0, 0, 100);
+  background(66, 75, 245);
 }
