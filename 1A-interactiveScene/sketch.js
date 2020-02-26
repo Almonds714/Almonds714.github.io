@@ -8,12 +8,20 @@
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  consoleInfo(); //Gives information into console from page, temporary...?
+}
+
+function draw() {
+  background(66, 75, 245);
+}
+
+function consoleInfo(){
   // eslint-disable-next-line no-undef
   console.log(windowWidth);
   // eslint-disable-next-line no-undef
   console.log(windowHeight);
 }
 
-function draw() {
-  background(66, 75, 245);
+function cubeBackground(){
+  
 }
