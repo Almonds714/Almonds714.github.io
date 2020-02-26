@@ -8,7 +8,9 @@
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  // eslint-disable-next-line no-undef
   console.log(windowWidth);
+  // eslint-disable-next-line no-undef
   console.log(windowHeight);
 }
 
