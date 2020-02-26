@@ -23,5 +23,5 @@ function consoleInfo(){
 }
 
 function cubeBackground(){
-  
+  rect(windowHeight, windowWidth/7, 50, 50)
 }
