@@ -5,41 +5,43 @@
 // Extra for Experts: Adding background music, change with mouse wheel and SFX on cube placements
 // - describe what you did to take this project "above and beyond"
 
-// Known Bugs: squareSize doesn't want to exist
+// Known Bugs: None
+// To Do; Create for loop for cube background
 
-// Play Functions
+// Global Variables
+
+let cubeSize;
+
+//Play Functions
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   consoleInfo(); //Gives information into console from page, temporary...?
+  rectMode(CENTER);
+  cubeSize = height/15;
 }
 
 function draw() {
-  background(66, 75, 245); //nice blue color 66, 75, 245
-  cubeBackground();
+  background(66, 75, 245); //nice blue color - 66, 75, 245.  Lighter blue color - 51, 246, 255.  Almost white, blue color - 199, 251, 255.
+  drawCubeBackground(); 
 }
 
 // Functions 
 
-function cubeBackground(){
-  squareSize = width/15;
+function drawCubeBackground(){
   noStroke();
-  fill(51, 246, 255); //lighter blue color
-  for (let i = 0; i < squareSize*3; i += squareSize){
-    rect(width/2-i, height-squareSize, squareSize, squareSize); 
+  fill(51, 246, 255);
+  rect(width/2, height-cubeSize/2, cubeSize, cubeSize);
+  // for (let i = cubeSize; i<3; i++){
+  //   rect(width/2, height-cubeSize/2, cubeSize, cubeSize);
   }
+
+  stroke(0); //line in the middle for reference
+  line(width/2, 0, width/2, height);
 }
 
-// function drawSquare(){
-//   fill(51, 246, 255); //lighter blue color
-//   rect(width/2, height-60, 60, 60);
-//   fill(199, 251, 255 ); //almost white blue color
-//   ellipse(width/2+30, height-30, 60);
-// }
-
 function consoleInfo(){
-  // eslint-disable-next-line no-undef
   console.log(windowWidth);
-  // eslint-disable-next-line no-undef
   console.log(windowHeight);
+  console.log(windowHeight/15);
 }
