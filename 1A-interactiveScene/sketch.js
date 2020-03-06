@@ -30,6 +30,7 @@ function draw() {
   stack();
 }
 
+
 // Functions 
 
 function stack(){
@@ -39,7 +40,7 @@ function stack(){
     rect(width/2+cubeSize*i, height-cubeSize/2, cubeSize, cubeSize);
   }
 
-  
+
 }
 
 function drawCubeBackground(){
