@@ -6,15 +6,15 @@
 // - describe what you did to take this project "above and beyond"
 
 // Known Bugs: None
-// To Do; Create for loop for cube background, make better looping and working for loop
+// To Do; Create block placements using objects
 
 // Global Variables
 
 let cubeSize;
-let locationX;
-let placement;
+let stacker = [];
 
-// Play Functions
+
+// Play Functions. Setup and Draw loop.
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -48,14 +48,10 @@ function drawCubeBackground(){
   fill(0);
 
   for (let i=0; i<16; i++){
-    for (let x=-4; x<5; x++){
-      rect(width/2+cubeSize*x, height-cubeSize/2-cubeSize*i, cubeSize, cubeSize);
+    for (let j=-4; j<5; j++){
+      rect(width/2+cubeSize*j, height-cubeSize/2-cubeSize*i, cubeSize, cubeSize);
     }
   }
-
-  //line in the middle for reference
-  // stroke(0);
-  // line(width/2, 0, width/2, height);
 }
 
 function consoleInfo(){
