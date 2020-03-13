@@ -4,28 +4,13 @@ let ballArray=[];
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  window.setInterval(addBall, 100);
+  window.setInterval(addBall, 1000);
 }
 
 function draw(){
   background("white");
   moveBall();
-  checkIfHit();
   displayBalls();
-}
-
-function mousePressed(){
-  // checkIfHit();
-}
-
-function checkIfHit(){
-  for (let i=0; i<ballArray.length; i++){
-    let distanceToMouse = dist(mouseX, mouseY, ballArray[i].x, ballArray[i].y);
-    if (distanceToMouse<ballArray[i].radius){
-      // ballArray[i].color="black";
-      ballArray.splice(i, 1);
-    }
-  }
 }
 
 function moveBall(){
@@ -41,7 +26,7 @@ function displayBalls(){
   noStroke();
   for (let i=0; i<ballArray.length; i++){
     fill(ballArray[i].color);
-    circle(ballArray[i].x, ballArray[i].y, ballArray[i].radius*2);
+    circle(ballArray[i].x, ballArray[i].y, ballArray[i].radius);
   }
 }
 
@@ -49,7 +34,7 @@ function addBall(){
   let thisBall={
     x: random(width), 
     y: random(height), 
-    radius: random(15, 25),
+    radius: random(25, 50),
     color: color(random(255), random(255), random(255), random(255)),
   };
   ballArray.push(thisBall);
